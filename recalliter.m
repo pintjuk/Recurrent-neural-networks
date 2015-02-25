@@ -1,4 +1,4 @@
-function [ new ] = recalliter( Patern, Wights, toshow)
+function [ new ] = recalliter( Patern, Wights)
 %UNTITLED4 Summary of this function goes here
 %   Detailed explanation goes here
     
@@ -10,7 +10,7 @@ function [ new ] = recalliter( Patern, Wights, toshow)
             old=new;
             new(i)=sgn(old*Wights(:, i));
         end
-        pause(10);
-        vis(toshow);
+        pause(0);
+        vis(new);
     end
 end
