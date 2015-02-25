@@ -3,7 +3,7 @@ function [ Pattern ] = recalleachiter( Pattern, Wights)
 %   Detailed explanation goes here
     
     [IGNORE, N] = size(Pattern);
-    
+    e = [];
     while true
         k = 0;
         for i = randperm(N)
@@ -11,8 +11,12 @@ function [ Pattern ] = recalleachiter( Pattern, Wights)
             k = k + 1;
             if mod(k, 100) == 0
                 pause(4);
+                subplot(2, 1, 1)
                 vis(Pattern);
+                subplot(2, 1, 2);
+                plot(1:size(e), e);
             end
+            e = [e; energy(Pattern, Wights)]
         end
     end
 end
