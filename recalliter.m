@@ -10,7 +10,7 @@ function [ new ] = recalliter( Patern, Wights, toshow)
             old=new;
             new(i)=sgn(old*Wights(:, i));
         end
-        pouse(10);
+        pause(10);
         vis(toshow);
     end
 end
