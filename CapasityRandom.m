@@ -10,7 +10,7 @@ for i= 3:9
     result1=recall(totest1, W);
     result2=recall(totest2, W);
     result3=recall(totest3, W);
-    error1=sum(result1==p1);
+    error1=sum(result1==p1);    
     error2=sum(result2==p1);
     error3=sum(result3==p1);
     e100=[e100; error1];
