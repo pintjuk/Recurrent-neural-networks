@@ -6,8 +6,8 @@ function [ new ] = recall( Patern, Wights )
     old=0;
     new=Patern;
     while ~all(old==new)
+    	old=new;
         for i = 1:N
-            old=new;
             new(i)=sgn(old*Wights(:, i));
         end
     end
