@@ -22,4 +22,6 @@ for bias = 1:5:70
 	end
 	maxrecall
 end
+xlabel('Bias')
+ylabel('maxrecall')
 plot(1:5:bias, maxrecall)
