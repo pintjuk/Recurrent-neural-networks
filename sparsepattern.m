@@ -1,8 +1,8 @@
 
-for bias = 1:70
+for bias = 1:5:70
 	npixels = 100;
 	maxrecall = 0;
-	for npatterns = 1:50
+	for npatterns = 1:5:50
 		Patterns = -ones(npatterns, npixels);
 		for i = 1:npatterns
 			Patterns(i, :) = flip(Patterns(i, :), 0.1 * npixels);
@@ -21,5 +21,5 @@ for bias = 1:70
 		maxrecall = max(maxrecall, nrecalled);
 	end
 	maxrecall
-	fflush(stdout)
 end
+plot(1:5:bias, maxrecall)
