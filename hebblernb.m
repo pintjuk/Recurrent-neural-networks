@@ -7,5 +7,6 @@ function [Weights] = hebblernb(Pattern)
         Wdelta = (Pattern' - p) * (Pattern - p);
         Weights = Weights + Wdelta;
     end
+    Weights = Weights - diag(diag(Weights));
 end
 
